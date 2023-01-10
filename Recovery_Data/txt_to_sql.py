@@ -13,7 +13,7 @@ c.execute('''
           ''')
 
 
-date = datetime.date(2022, 11, 27)
+date = datetime.date(2022, 11, 27)  # Date of the first recovery file you have
 
 
 # Enter values from folder to the database
