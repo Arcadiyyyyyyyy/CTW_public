@@ -99,12 +99,8 @@ def app(owner, bot, path=""):
 
         try:
             bot.send_document(static.owner, telebot.types.InputFile(path+"db.db"))
-            bot.send_document(static.owner, telebot.types.InputFile(
-                path+"Recovery_Data/htmls/index_"+str(date)+".html")
-                              )
-            bot.send_document(static.owner, telebot.types.InputFile(
-                path+"Recovery_Data/vacancies/vacancies_"+str(date)+".txt")
-                              )
+            bot.send_document(static.owner, telebot.types.InputFile(path+"Recovery_Data/htmls/index_"+str(date)+".html"))
+            bot.send_document(static.owner, telebot.types.InputFile(path+"Recovery_Data/vacancies/vacancies_"+str(date)+".txt"))
         except Exception as e:
             bot.send_message(static.owner, "Failed to send backup files")
             print(e)
@@ -151,8 +147,8 @@ def app(owner, bot, path=""):
         print(f"Error {e} happened")
 
 
-# Launching program without implementation in frontend in infinite loop
+# Launching program without implementation in frontend
 if __name__ == "__main__":
     while True:
-        app(static.owner, telebot.TeleBot(static.bot_token, parse_mode="HTML"))
+        app(-1001630290226, telebot.TeleBot("Enter Bot API HERE", parse_mode="HTML"))
         time.sleep(86400)

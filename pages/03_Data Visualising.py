@@ -4,7 +4,9 @@ import sqlite3
 import pandas as pd
 import datetime
 from collections import Counter
-from .. import static
+import sys
+sys.path.append("..")
+import static
 
 
 conn = sqlite3.connect("db.db")

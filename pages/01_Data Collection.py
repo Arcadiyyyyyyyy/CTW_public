@@ -1,7 +1,9 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
-from .. import static
+import sys
+sys.path.append("..")
+import static
 
 
 # Connecting to the database
@@ -10,7 +12,7 @@ c = conn.cursor()
 
 
 # Creating a Pandas Dataset from sql table
-df = pd.read_sql_query("SELECT "+static.date+", "+static.vacancies+"FROM CTW", conn)
+df = pd.read_sql_query("SELECT "+static.date+", "+static.vacancies+" FROM CTW", conn)
 
 
 c.execute("SELECT Date FROM CTW")

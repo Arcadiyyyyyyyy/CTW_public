@@ -1,4 +1,1 @@
-Error near ")": syntax error happened at 2023-01-04 15:03:14.550149
-Error 'charmap' codec can't encode character '\u202f' in position 32: character maps to <undefined> happened at 2023-01-04 17:51:53.909495
-Error unable to open database file happened at 2023-01-05 09:35:19.433358
-Error list index out of range happened at 2023-01-05 10:40:40.495133
+

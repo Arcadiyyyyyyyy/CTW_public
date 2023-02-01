@@ -10,7 +10,7 @@ c = conn.cursor()
 
 
 # Creating a Pandas Dataset from sql table
-df = pd.read_sql_query("SELECT "+static.date+", "+static.vacancies+"FROM CTW", conn)
+df = pd.read_sql_query("SELECT "+static.date+", "+static.vacancies+" FROM CTW", conn)
 
 
 # Making dataset accessible from other pages
@@ -36,7 +36,6 @@ st.write("Pandas, Streamlit, Plotly, Requests, BeautifulSoup, Sqlite3, Host serv
 st.write("The total amount of lines to make this work: 530")
 
 
-# Adding links to the text
 st.title("Links:")
 st.markdown("[Telegram Chanel with notifications](%s)" % static.telegram)
 st.markdown("[LinkedIn](%s)" % static.linked)
